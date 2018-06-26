@@ -1300,7 +1300,7 @@ var ticksPerSecond=20,game,GameController=function()
 	}
 	,n.prototype.MutateStat=function(n,t,i,r)
 		{
-		var f=n<t?n-StatVariance(n):t-StatVariance(t),e=n>t?n+StatVariance(n):t+StatVariance(t),u=RandomInRange(f,e);
+		var f=n<t?n + (StatVariance(n) / 2):t + (StatVariance(t) / 2),e=n>t?n+StatVariance(n):t+StatVariance(t),u=RandomInRange(f,e);
 		return u<i&&(u=i),u>r&&(u=r),u
 	}
 	,n.prototype.DefaultCritter=function(n,t,i)
