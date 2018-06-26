@@ -867,7 +867,7 @@ var ticksPerSecond=20,game,GameController=function()
 	}
 	,n.prototype.Boost=function()
 		{
-		this.boosts()<1||(this.boosts(Math.round((this.boosts()-1)*10)/10),this.BreedCheck(!0))
+		this.boosts()<0.1||(this.boosts(Math.round((this.boosts()-0.1)*10)/10),this.BreedCheck(!0))
 	}
 	,n.prototype.Buy=function(n,t)
 		{
