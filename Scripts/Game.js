@@ -34,7 +34,7 @@ function Shuffle(n)
 	)i=Math.floor(Math.random()*t),t-=1,r=n[t],n[t]=n[i],n[i]=r;
 	return n
 }
-var ticksPerSecond=50,game,GameController=function()
+var ticksPerSecond=20,game,GameController=function()
 	{
 	function n()
 		{
@@ -1478,7 +1478,7 @@ var ticksPerSecond=50,game,GameController=function()
 		this.baseScore=SmartRound(Math.pow(f,.2));
 		this.bonusScore=SmartRound(Math.pow(u,.2));
 		this.traits[2].stats=[];
-		this.actionTime=30*Math.pow(.9,Math.log(this.traits[2].value)/Math.LN2)*ticksPerSecond;
+		this.actionTime=10*Math.pow(.9,Math.log(this.traits[2].value)/Math.LN2)*ticksPerSecond;
 		this.actionTime<ticksPerSecond*3&&(this.actionTime=ticksPerSecond*3);
 		o=this.actionTime/ticksPerSecond;
 		this.actionTimeSeconds=Math.round(o*100)/100;
